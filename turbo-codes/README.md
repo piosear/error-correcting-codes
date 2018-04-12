@@ -14,7 +14,7 @@
 情報長1000、レジスタ数3、反復回数8を基本として、１つのパラメータを変化させたときのBER特性のグラフは次のようになります。
 <img src="https://github.com/piosear/error-correcting-codes/blob/master/turbo-codes/Figures/Turbo_performance.png" alt="graph" title="Turbo符号の誤り率特性" width=50%>
 
-横軸はビット電力対雑音電力比https://latex.codecogs.com/gif.latex?E_b/N_0
+横軸はビット電力対雑音電力比<img src="https://latex.codecogs.com/gif.latex?E_b/N_0" />
 を表し、右にいくほど大きな電力で送信していることを示します。  
 つまり、左下にいくほど小さな電力で小さな誤り率を達成しているので、特性が良いことになります。  
 
