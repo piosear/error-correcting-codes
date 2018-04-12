@@ -27,6 +27,6 @@
 ## Run
 ```
 $ gcc Turbo_Codes.c
-$ ./a.out
+$ ./ a.out
 ```  
 で動作します。
