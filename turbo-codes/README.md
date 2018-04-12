@@ -13,4 +13,4 @@
 
 情報長1000、レジスタ数3、反復回数8を基本として、１つのパラメータを変化させたときのグラフは次のようになります。
 
-<img src="https://github.com/piosear/error-correcting-codes/blob/master/turbo-codes/Figures/Turbo_performance.png" alt="graph" title="Turbo符号の誤り率特性">
+<img src="https://github.com/piosear/error-correcting-codes/blob/master/turbo-codes/Figures/Turbo_performance.png" alt="graph" title="Turbo符号の誤り率特性">
