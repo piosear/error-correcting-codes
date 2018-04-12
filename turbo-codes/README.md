@@ -2,8 +2,8 @@
 このプログラムは、通信規格LTEなどに用いられている誤り訂正符号であるTurbo符号の復号誤り率を求めるシミュレーションです。
 ## Description
 このプログラムはベーシックなTurbo符号のシミュレーションです。  
-変調方式としてBPSK (binary phase-shift keying)、復号法としてLog-MAP復号を用いています。  
-出力は横軸が信号電力対雑音電力比(SNR: signal to noise ratio)、縦軸がビット誤り率(BER: bit error rate)のBER特性と、横軸SNRで縦軸がフレーム誤り率(FER: frame error rate)のFER特性の2つです。  
+変調方式としてBPSK (binary phase-shift keying)、復号法としてLog-MAP復号を用いています。  
+生成されるファイルは横軸がビット電力対雑音電力比$E_b/N_0$、縦軸がビット誤り率(BER: bit error rate)のBER特性と、横軸が$E_b/N_0$で縦軸がフレーム誤り率(FER: frame error rate)のFER特性の2つです。  
 変更可能なパラメータは  
 - INFO_LENGTH
 - NU (2,3,4から選択可)  
