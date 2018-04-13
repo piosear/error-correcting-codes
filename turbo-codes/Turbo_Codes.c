@@ -7,20 +7,21 @@
 
 #define INFO_LENGTH 1000  // information length
 #define NU 3              // number of register
+#define ITERATE 8         // number of iteration
+
 #define TOTAL_LENGTH (INFO_LENGTH + NU)
 #define CODE_LENGTH (3 * TOTAL_LENGTH + NU)  // codeword length
 #define CODE_RATE ((double)INFO_LENGTH / CODE_LENGTH)
 #define NUM_OF_STATE (1 << NU)
-#define ITERATE 8  // number of iteration
 #define INF 1E+20
 
 #define TRIAL 1000
 #define LOOP_MAX 100
-#define SNR_MAX 1.0
+#define SNR_MAX 3.0
 #define SNR_MIN 0.0
 #define SNR_WIDTH 0.2
 
-#define BER_END_CONDITION 1E-6
+#define BER_END_CONDITION 1E-5
 #define ERROR_END_CONDITION 500
 #define ERROR_MIN 10
 
@@ -44,8 +45,8 @@ void noise(double complex *transmittedArray, int num);
 int errorCount(int *infoArray, int *estimatedArray, int num);
 
 void srandomInterleaver();
-bool sorting1(int start);
-bool sorting2(int start);
+bool sortingForword(int start);
+bool sortingBackword(int start);
 
 double var;
 double sigma;
@@ -249,7 +250,7 @@ void srandomInterleaver() {
 
         success = true;
         for (counter = 0; counter < INFO_LENGTH - 1; counter++) {
-            if (sorting1(counter) == false) {
+            if (sortingForword(counter) == false) {
                 success = false;
                 break;
             }
@@ -260,7 +261,7 @@ void srandomInterleaver() {
 
         success = true;
         for (counter = INFO_LENGTH - 1; counter > 0; counter--) {
-            if (sorting2(counter) == false) {
+            if (sortingBackword(counter) == false) {
                 success = false;
                 break;
             }
@@ -271,7 +272,7 @@ void srandomInterleaver() {
     }
 }
 
-bool sorting1(int start) {
+bool sortingForword(int start) {
 
     int i, j, temp;
 
@@ -291,7 +292,7 @@ bool sorting1(int start) {
     return false;
 }
 
-bool sorting2(int start) {
+bool sortingBackword(int start) {
 
     int i, j, temp;
 
